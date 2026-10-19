@@ -1,0 +1,21 @@
+{
+  "precision": 1e-8,
+  "max_iterations": 300,
+
+  "single_equation": {
+    "expression": "sqrt(x + 2) - 2*cos(x)",
+    "x0": 0.5,
+    "plot_range": [-1.8, 4.0]
+  },
+
+  "system": {
+    "variables": ["x1", "x2"],
+    "expressions": [
+      "a*x1**2 - x2 + x2**2 - a",
+      "x1 - sqrt(x2 + a) + 1"
+    ],
+    "parameters": {"a": 1},
+    "x0": [0.5, 1.0],
+    "plot_range": {"x1": [-1.5, 2.0], "x2": [-0.99, 2.5]}
+  }
+}
